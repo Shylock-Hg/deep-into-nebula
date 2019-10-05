@@ -1,0 +1,6 @@
+[book]
+authors = ["Shylock Hg"]
+language = "en"
+multilingual = false
+src = "src"
+title = "deep-into-nebula"
