@@ -9,8 +9,7 @@ Value: [property1, property2, ... propertyN]
 
 2. Edge
 
-InKey: [type(1), partId(3), srcId(4), edgeType(4), Ranking(4), dstId(4), version(8)] <br/>
-OutKey: [type(1), partId(3), dstId(4), edgeType(4), Ranking(4), srcId(4), version(8)] <br/>
+Key: [type(1), partId(3), srcId(4), edgeType(4), Ranking(4), dstId(4), version(8)] <br/>
 Value: [property1, property2, ... propertyN] <br/>
 
 3. Key Space
