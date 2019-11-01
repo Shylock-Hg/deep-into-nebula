@@ -26,7 +26,7 @@ The key is used to identify the one record in the actual storage engine.
 
 ## Top
 
-The storage architecture:
+The storage architecture in code:
 
 ```
  (spaceId, partId, vertex/edge)    (spaceId, partId, vertex/edge)
@@ -61,3 +61,25 @@ RocksDB RocksDB ... RocksDB                RocksDB RocksDB ...  RocksDB
 ```
 
 The partitions with same [spaceId, partId] combined into one raft group.
+
+The storage architecture in logical:
+
+```
+                    Space                                      Space
+
+      raft group     raft group   raft group  ...
+
+      |P1|              |P2|          |P3|
+
+    |P1|  |P1|      |P2|    |P2|   |P3|   |P3|
+```
+
+The storage architecture in physis:
+
+```
+                 Space                                  Space
+|P1|              |P2|              |P3|
+|P3| -consensus-  |P1| -consensus-  |P1|  ...
+|P2|              |P3|              |P2|
+host              host              host
+```
