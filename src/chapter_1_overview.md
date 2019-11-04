@@ -38,6 +38,15 @@ client --query--> parser --AST--> Execution Planner
           Storage Client  Meta Client
 ```
 
+## Server Ref
+
+```
+Graph --> Meta
+  |        ^
+  |        |
+  ------>Storage
+```
+
 ## Reference
 
 [Raft](https://raft.github.io/)
