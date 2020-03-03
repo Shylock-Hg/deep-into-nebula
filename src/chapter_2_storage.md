@@ -9,8 +9,20 @@ Value: [property1, property2, ... propertyN]
 
 2. Edge
 
+Directed edge
+
+Positive edge:
+
 Key: [type(1), partId(3), srcId(4), edgeType(4), Ranking(4), dstId(4), version(8)] <br/>
 Value: [property1, property2, ... propertyN] <br/>
+
+Negative edge:
+
+Key: [type(1), partId(3), dstId(4), edgeType(4), Ranking(4), srcId(4), version(8)] <br/>
+Value: [property1, property2, ... propertyN] <br/>
+
+This positive/negative edge for partition-friendly that the one directed edge will be stored in the
+partition contains source vertex and partition destination vertex.
 
 3. Key Space
 
